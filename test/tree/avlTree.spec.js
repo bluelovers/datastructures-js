@@ -33,7 +33,6 @@ describe('avlTree tests', () => {
       expect(avl.root().getRight().getValue()).to.equal(90);
       expect(avl.root().getLeft().getValue()).to.equal(50);
 
-
       avl.insert(40);
       avl.insert(30);
       /*
@@ -56,6 +55,7 @@ describe('avlTree tests', () => {
               30  50
 
       */
+
       expect(avl.root().getValue()).to.equal(80);
       expect(avl.root().getRight().getValue()).to.equal(90);
       expect(avl.root().getLeft().getValue()).to.equal(40);
@@ -83,6 +83,7 @@ describe('avlTree tests', () => {
            20  50  90
 
       */
+
       expect(avl.root().getValue()).to.equal(40);
       expect(avl.root().getLeft().getValue()).to.equal(30);
       expect(avl.root().getLeft().getLeft().getValue()).to.equal(20);
@@ -185,7 +186,7 @@ describe('avlTree tests', () => {
 
       avl.remove(35);
       /*           
-        verify left-right rotation
+        verify right rotation
                            40
                          /    \
         (balance = 2)  30      80
