@@ -2,11 +2,12 @@
 
 const expect  = require('chai').expect;
 const AvlNode = require('../../lib/tree/avlNode');
+const rotations = require('../../lib/tree/rotations');
 const AvlTree = require('../../lib/tree/avlTree');
 
 describe('avlTree tests', () => {
 
-  let avl = new AvlTree(AvlNode);
+  let avl = new AvlTree(AvlNode, rotations);
 
   describe('.insert(value)', () => {
     it('should insert values to the tree and maintain it balanced', () => {
